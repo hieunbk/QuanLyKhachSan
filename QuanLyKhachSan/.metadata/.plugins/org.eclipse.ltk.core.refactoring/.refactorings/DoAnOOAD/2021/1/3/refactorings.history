@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;DoAnOOAD&apos;&#x0D;&#x0A;- Original project: &apos;DoAnOOAD&apos;&#x0D;&#x0A;- Original element: &apos;uiThueTraPhong.LaySL.java&apos;" description="Delete element" element1="/src&lt;uiThueTraPhong{LaySL.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1610391632720" subPackages="false" version="1.0"/>
+</session>

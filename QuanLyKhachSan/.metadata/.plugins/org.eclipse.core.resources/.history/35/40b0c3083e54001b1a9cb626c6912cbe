@@ -1,0 +1,14 @@
+package uiThueTraPhong;
+
+import javax.swing.JPanel;
+
+public class LaySL extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public LaySL() {
+
+	}
+
+}

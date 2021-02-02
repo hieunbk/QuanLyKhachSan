@@ -1,0 +1,14 @@
+package uiQuanLyPhong;
+
+import javax.swing.JPanel;
+
+public class GUIQLPhong1 extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public GUIQLPhong1() {
+
+	}
+
+}

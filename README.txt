@@ -1,0 +1,2 @@
+- Create database
+- Vào file database đổi tên localhost, user, password và chạy

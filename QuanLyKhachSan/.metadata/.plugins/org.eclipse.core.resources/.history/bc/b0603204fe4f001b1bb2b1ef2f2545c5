@@ -1,0 +1,121 @@
+package uiQuanLyPhong;
+
+import java.awt.Frame;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.JToolBar;
+import javax.swing.table.DefaultTableModel;
+
+import uiLogin.GUIMenu;
+
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.border.TitledBorder;
+import javax.swing.JComboBox;
+import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
+
+public class GUIQLPhong1 extends JPanel {
+	/**
+	 * Create the panel.
+	 */
+	JComboBox<String> cmbLoaiPhong;
+	private DefaultTableModel tableModel;
+	private JTable table;
+	JButton btnThem, btnSua, btnLuu, btnXoa, btnLamMoi, btnBack;
+	JToolBar toolBar;
+	JPanel pNor;
+	JLabel lblTitle;
+	JLabel lblMaPhong, lblLoaiPhong, lblGiaPhong, lblGhiChu;
+	private Frame child;
+	private JTextField textfieldGiaPhong, textfieldMaPhong, textfieldGhiChu;
+	
+	protected ArrayList<String> values = new ArrayList<String>();
+	private StringArrayLookAhead lookAhead = new StringArrayLookAhead(values);
+	public LookAheadTextField textSearch = new LookAheadTextField(4, lookAhead);
+	
+	private JButton btnTim;
+	private JTextField textField;
+	
+	public GUIQLPhong1(GUIMenu guiMenu) {
+		setBounds(32, 32, 1924, 771);
+		setLayout(null);
+		
+		lblTitle = new JLabel("Quản Lý Phòng");
+		lblTitle.setBounds(792, 5, 340, 58);
+		lblTitle.setForeground(new Color(0xFFAA00));
+		lblTitle.setFont(new Font("Times New Roman", Font.BOLD, 50));
+		add(lblTitle);
+		
+		pNor = new JPanel();
+		pNor.setBorder(new TitledBorder(null, "T\u00E1c v\u1EE5 ph\u00F2ng", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		pNor.setBounds(158, 74, 709, 657);
+		add(pNor);
+		pNor.setLayout(null);
+		
+		lblMaPhong = new JLabel("Mã Phòng:");
+		lblMaPhong.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblMaPhong.setBounds(28, 59, 113, 35);
+		pNor.add(lblMaPhong);
+		
+		lblLoaiPhong = new JLabel("Giá Phòng:");
+		lblLoaiPhong.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblLoaiPhong.setBounds(43, 124, 98, 23);
+		pNor.add(lblLoaiPhong);
+		
+		lblGiaPhong = new JLabel("Ghi chú:");
+		lblGiaPhong.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblGiaPhong.setBounds(57, 180, 84, 35);
+		pNor.add(lblGiaPhong);
+		
+		lblGhiChu = new JLabel("Loại Phòng: ");
+		lblGhiChu.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblGhiChu.setBounds(397, 59, 84, 35);
+		pNor.add(lblGhiChu);
+		
+		cmbLoaiPhong = new JComboBox<String>();
+		cmbLoaiPhong.setBounds(497, 59, 132, 35);
+		pNor.add(cmbLoaiPhong);
+		cmbLoaiPhong.addItem("Giường đôi");
+		cmbLoaiPhong.addItem("VIP");
+		cmbLoaiPhong.addItem("Giường đơn");
+		cmbLoaiPhong.addItem("Thường");
+		
+		textfieldGiaPhong = new JTextField();
+		textfieldGiaPhong.setBounds(154, 59, 202, 35);
+		pNor.add(textfieldGiaPhong);
+		textfieldGiaPhong.setColumns(10);
+		
+		textfieldMaPhong = new JTextField();
+		textfieldMaPhong.setBounds(152, 118, 477, 35);
+		pNor.add(textfieldMaPhong);
+		textfieldMaPhong.setColumns(10);
+		
+		textfieldGhiChu = new JTextField();
+		textfieldGhiChu.setBounds(154, 180, 477, 35);
+		pNor.add(textfieldGhiChu);
+		textfieldGhiChu.setColumns(10);
+		textSearch.setBounds(119, 247, 137, 42);
+		
+		textSearch.setBounds(125, 247, 443, 35);
+		pNor.add(textSearch);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(575, 247, 105, 35);
+		pNor.add(btnNewButton);
+		
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(888, 84, 929, 647);
+		add(scrollPane);
+		
+		table = new JTable();
+		scrollPane.setViewportView(table);
+		
+	}
+}

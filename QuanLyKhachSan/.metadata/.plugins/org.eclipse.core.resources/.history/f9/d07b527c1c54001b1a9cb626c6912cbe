@@ -1,0 +1,70 @@
+package services;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import database.Database;
+import entities.CT_DichVu;
+import entities.DichVu;
+
+public class QuanLyCTDV {
+	public ArrayList<CT_DichVu> dsCTDV;
+	public QuanLyCTDV() {
+		dsCTDV = new ArrayList<>();
+	}
+	public ArrayList<CT_DichVu> getDS(){
+		return dsCTDV;
+	}
+	
+	public boolean createCTDV(String maDV, String maHD, String slsd,String thoiGian) {
+		System.out.println("21: "+thoiGian);
+		Database.getInstance();
+		Connection con = Database.getConnection();
+		PreparedStatement stmt = null;
+		int n = 0;
+		try {
+			stmt = con.prepareStatement(
+			"insert into CTDichVu(maDV, maHD, soLuongSD,thoiGianSD) values (?,?,?,?)");
+			stmt.setInt(1, Integer.parseInt(maDV));
+			stmt.setInt(2, Integer.parseInt(maHD));
+			stmt.setInt(3,  Integer.parseInt(slsd));
+			stmt.setNString(4,  thoiGian);
+			n = stmt.executeUpdate();
+		} catch (SQLException e) {
+			// e.printStackTrace();
+			if (e.getMessage().contains("Violation of PRIMARY KEY"))
+				return false;
+		}
+		return n > 0;
+	}
+	
+//	public QuanLyCTDV findById(String maDV) {
+//		DichVu dv = new DichVu();
+//		try {
+//			Database.getInstance();
+//			Connection con = Database.getConnection();
+//			String sql = "select * from DichVu where maDV = ?";
+//			PreparedStatement stm = con.prepareStatement(sql);
+//			stm.setInt(1, Integer.parseInt(maDV));
+//			ResultSet rs = stm.executeQuery();
+//			while(rs.next()) {
+//				String tenDV = rs.getNString(2);
+//				String donVi = rs.getNString(3);
+//				String loai = rs.getNString(4);
+//				int soLuongCo = rs.getInt(5);
+//				int giaDV = rs.getInt(6);
+//				dv = new DichVu(Integer.parseInt(maDV), tenDV, donVi, loai, soLuongCo, giaDV);
+//			}
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//		return dv;	
+//	}
+	public void Update ()
+	{
+		
+	}
+}
