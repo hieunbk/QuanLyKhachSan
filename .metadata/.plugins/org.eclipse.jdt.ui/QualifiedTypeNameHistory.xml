@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="uiQuanLy.GUIQuanLyHoaDon"/>
+    <fullyQualifiedTypeName name="services.QuanLyHoaDon"/>
+    <fullyQualifiedTypeName name="uiQuanLyPhong.QUIQLPhong1"/>
+    <fullyQualifiedTypeName name="uiQuanLyPhong.GUIQLPhong"/>
+    <fullyQualifiedTypeName name="uiQuanLyPhong.GUIQLPhong1"/>
+    <fullyQualifiedTypeName name="uiQuanLyPhong.LookAheadTextField"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="com.toedter.calendar.JDateChooser"/>
+    <fullyQualifiedTypeName name="entities.HoaDon"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="uiThueTraPhong.GUIThuePhong"/>
+    <fullyQualifiedTypeName name="uiThueTraPhong.GUIThueTraPhong"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="database.Database"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="com.sun.net.httpserver.Authenticator.Result"/>
+    <fullyQualifiedTypeName name="services.QuanLyCTDV"/>
+    <fullyQualifiedTypeName name="entities.CT_DichVu"/>
+    <fullyQualifiedTypeName name="uiThueTraPhong.LaySL"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="uiLogin.GUILogin"/>
+</qualifiedTypeNameHistroy>

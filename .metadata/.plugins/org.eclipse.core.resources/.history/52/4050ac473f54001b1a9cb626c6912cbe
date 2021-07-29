@@ -1,0 +1,33 @@
+package uiThueTraPhong;
+
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+import uiLogin.GUIMenu;
+
+public class LaySL extends JPanel {
+	private JTextField textField;
+	private GUITraPhong parent;
+	/**
+	 * Create the panel.
+	 */
+	public LaySL(GUITraPhong parent) {
+		this.parent = parent;
+		setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBounds(217, 32, 66, 33);
+		add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel = new JLabel("Nhập số lượng sử dụng:");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel.setBounds(22, 31, 198, 33);
+		add(lblNewLabel);
+
+	}
+}
